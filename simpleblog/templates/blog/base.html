@@ -1,8 +1,8 @@
 
 
 
-
-    <!-- {% block title %}
+{% comment %}
+    {% block title %}
     {% endblock title %}
   </title>
   <style>
@@ -19,7 +19,8 @@
 </footer>
 </body>
 </html>
--->
+{% endcomment %}
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -187,238 +188,8 @@
 		<div class="row">
 			<!-- Blog post-->
 			<div class="post-content post-thumbnail col-md-9">
-				<!-- Blog image post-->
-				<div class="post-item">
-					<div class="post-image">
-						<a href="#">
-							<img alt="" src="{% static 'images/blog/thumb/1.jpg' %}">
-						</a>
-					</div>
-					<div class="post-content-details">
-						<div class="post-title">
-							<h3><a href="#">Image post example</a></h3>
-						</div>
-						<div class="post-info">
-							<span class="post-autor">Post by: <a href="#">Alea Grande</a></span>
-							<span class="post-category">in <a href="#">Productivity</a></span>
-						</div>
-						<div class="post-description">
-							<p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus accumsan dignissim quis quis urna.</p>
-
-							<div class="post-read-more">
-								<a class="read-more" href="blog-post.html">read more <i class="fa fa-long-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="post-meta">
-						<div class="post-date">
-							<span class="post-date-day">16</span>
-							<span class="post-date-month">January</span>
-							<span class="post-date-year">2015</span>
-						</div>
-
-						<div class="post-comments">
-							<a href="#">
-								<i class="fa fa-comments-o"></i>
-								<span class="post-comments-number">324</span>
-							</a>
-						</div>
-						<div class="post-comments">
-							<a href="#">
-								<i class="fa fa-share-alt"></i>
-								<span class="post-comments-number">324</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- Blog slider post-->
-				<div class="post-item">
-
-					<div class="post-slider">
-						<div class="carousel" data-carousel-col="1">
-							<img alt="image" src="{% static 'images/blog/thumb/2.jpg' %}">
-							<img alt="image" src="{% static 'images/blog/thumb/3.jpg' %}">
-						</div>
-					</div>
-
-					<div class="post-content-details">
-						<div class="post-title">
-							<h3><a href="#">Slider post demo</a></h3>
-						</div>
-						<div class="post-info">
-							<span class="post-autor">Post by: <a href="#">Alea Grande</a></span>
-							<span class="post-category">in <a href="#">Productivity</a></span>
-						</div>
-						<div class="post-description">
-							<p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus accumsan dignissim quis quis urna.</p>
-
-							<div class="post-read-more">
-								<a class="read-more" href="blog-post.html">read more <i class="fa fa-long-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="post-meta">
-						<div class="post-date">
-							<span class="post-date-day">16</span>
-							<span class="post-date-month">January</span>
-							<span class="post-date-year">2015</span>
-						</div>
-
-						<div class="post-comments">
-							<a href="#">
-								<i class="fa fa-comments-o"></i>
-								<span class="post-comments-number">324</span>
-							</a>
-						</div>
-						<div class="post-comments">
-							<a href="#">
-								<i class="fa fa-share-alt"></i>
-								<span class="post-comments-number">324</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- Blog image post-->
-				<div class="post-item">
-					<div class="post-image">
-						<a href="#">
-							<img alt="" src="{% static 'images/blog/thumb/4.jpg' %}">
-						</a>
-					</div>
-					<div class="post-content-details">
-						<div class="post-title">
-							<h3><a href="#">Image post example</a></h3>
-						</div>
-						<div class="post-info">
-							<span class="post-autor">Post by: <a href="#">Alea Grande</a></span>
-							<span class="post-category">in <a href="#">Productivity</a></span>
-						</div>
-						<div class="post-description">
-							<p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus accumsan dignissim quis quis urna.</p>
-
-							<div class="post-read-more">
-								<a class="read-more" href="blog-post.html">read more <i class="fa fa-long-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="post-meta">
-						<div class="post-date">
-							<span class="post-date-day">16</span>
-							<span class="post-date-month">January</span>
-							<span class="post-date-year">2015</span>
-						</div>
-
-						<div class="post-comments">
-							<a href="#">
-								<i class="fa fa-comments-o"></i>
-								<span class="post-comments-number">324</span>
-							</a>
-						</div>
-						<div class="post-comments">
-							<a href="#">
-								<i class="fa fa-share-alt"></i>
-								<span class="post-comments-number">324</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- Blog image post-->
-				<div class="post-item">
-					<div class="post-image">
-						<a href="#">
-							<img alt="" src="{% static 'images/blog/thumb/5.jpg' %}">
-						</a>
-					</div>
-					<div class="post-content-details">
-						<div class="post-title">
-							<h3><a href="#">Image post example</a></h3>
-						</div>
-						<div class="post-info">
-							<span class="post-autor">Post by: <a href="#">Alea Grande</a></span>
-							<span class="post-category">in <a href="#">Productivity</a></span>
-						</div>
-						<div class="post-description">
-							<p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus accumsan dignissim quis quis urna.</p>
-
-							<div class="post-read-more">
-								<a class="read-more" href="blog-post.html">read more <i class="fa fa-long-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="post-meta">
-						<div class="post-date">
-							<span class="post-date-day">16</span>
-							<span class="post-date-month">January</span>
-							<span class="post-date-year">2015</span>
-						</div>
-
-						<div class="post-comments">
-							<a href="#">
-								<i class="fa fa-comments-o"></i>
-								<span class="post-comments-number">324</span>
-							</a>
-						</div>
-						<div class="post-comments">
-							<a href="#">
-								<i class="fa fa-share-alt"></i>
-								<span class="post-comments-number">324</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- Blog image post-->
-				<div class="post-item">
-					<div class="post-image">
-						<a href="#">
-							<img alt="" src="{% static 'images/blog/thumb/6.jpg' %}">
-						</a>
-					</div>
-					<div class="post-content-details">
-						<div class="post-title">
-							<h3><a href="#">Image post example</a></h3>
-						</div>
-						<div class="post-info">
-							<span class="post-autor">Post by: <a href="#">Alea Grande</a></span>
-							<span class="post-category">in <a href="#">Productivity</a></span>
-						</div>
-						<div class="post-description">
-							<p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus accumsan dignissim quis quis urna.</p>
-
-							<div class="post-read-more">
-								<a class="read-more" href="blog-post.html">read more <i class="fa fa-long-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="post-meta">
-						<div class="post-date">
-							<span class="post-date-day">16</span>
-							<span class="post-date-month">January</span>
-							<span class="post-date-year">2015</span>
-						</div>
-
-						<div class="post-comments">
-							<a href="#">
-								<i class="fa fa-comments-o"></i>
-								<span class="post-comments-number">324</span>
-							</a>
-						</div>
-						<div class="post-comments">
-							<a href="#">
-								<i class="fa fa-share-alt"></i>
-								<span class="post-comments-number">324</span>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<a class="button border small rounded" href="#">Older posts</a>
-			</div>
-			<!-- END: Blog post-->
-
+        {% block content %}
+        {% endblock content %}
 			<!-- Sidebar-->
 			<div class="sidebar col-md-3">
 
