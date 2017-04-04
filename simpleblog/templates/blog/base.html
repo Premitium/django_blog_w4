@@ -53,7 +53,10 @@
     <script src="{% static 'vendor/plugins-compressed.js' %}"></script>
 
 </head>
-
+<style type="text/css">
+	{% block style %}
+	{% endblock %}
+</style>
 <body class="wide">
 	<!--SITE LOADER-->
 	<div class="loader-wrapper">
@@ -109,59 +112,6 @@
 		</header>
 		<!--END: HEADER-->
 
-<!-- SLIDER OWL -->
-<section class="p-b-0">
-	<div class="container">
-		<div id="slider-carousel" class="boxed-slider">
-
-			<div style="background-image:url('{% static 'homepages/blog/images/slider/1.jpg' %}');" class="owl-bg-img">
-
-				<div class="container container-fullscreen">
-					<div class="text-middle">
-						<div class="text-center text-light">
-							<h6>LIFESTYLE</h6>
-							<div class="seperator seperator-small no-padding"></div>
-							<h1 class="text-uppercase">Lorem ipsum dolor sit amet</h1>
-
-							<a class="button border rounded transparent" href="#">Read more</a>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div style="background-image:url('{% static 'homepages/blog/images/slider/2.jpg' %}');" class="owl-bg-img">
-				<div class="container container-fullscreen">
-					<div class="text-middle">
-						<div class="text-center text-light">
-							<h6>LIFESTYLE</h6>
-							<div class="seperator seperator-small no-padding"></div>
-							<h1 class="text-uppercase">Lorem ipsum dolor sit amet</h1>
-
-							<a class="button border rounded transparent" href="#">Read more</a>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div style="background-image:url('{% static 'homepages/blog/images/slider/3.jpg' %}');" class="owl-bg-img">
-				<div class="container container-fullscreen">
-					<div class="text-middle">
-						<div class="text-center text-light">
-							<h6>LIFESTYLE</h6>
-							<div class="seperator seperator-small no-padding"></div>
-							<h1 class="text-uppercase">Lorem ipsum dolor sit amet</h1>
-
-							<a class="button border rounded transparent" href="#">Read more</a>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- END: SLIDER OWL -->
-
 <!-- CONTENT -->
 <section class="p-t-40">
 	<div class="container">
@@ -170,72 +120,9 @@
 			<div class="post-content post-thumbnail col-md-9">
         {% block content %}
         {% endblock content %}
-			<!-- Sidebar-->
-			<div class="sidebar col-md-3">
 
-
-				<!--widget blog articles-->
-				<div class="widget clearfix widget-blog-articles">
-					<h4 class="widget-title">From our Blog</h4>
-					<ul class="list-posts list-medium">
-						<li><a href="#">Printing and typesetting</a>
-							<small>Jun 18 2015</small>
-						</li>
-						<li><a href="#">Lorem Ipsum has been the industry's</a><small>Jun 18 2015</small>
-						</li>
-						<li><a href="#">Ipsum and typesetting</a><small>Jun 18 2015</small>
-						</li>
-						<li><a href="#">Specimen book</a><small>Jun 18 2015</small>
-						</li>
-
-					</ul>
-				</div>
-				<!--end: widget blog articles-->
-
-				<!--widget categories-->
-				<div class="widget clearfix widget-categories">
-					<h4 class="widget-title">Our Services</h4>
-					<ul class="list list-arrow-icons">
-						<li> <a title="" href="#">Development </a> </li>
-						<li> <a title="" href="#">Branding </a> </li>
-						<li> <a title="" href="#">Marketing </a> </li>
-						<li> <a title="" href="#">Branding </a> </li>
-						<li> <a title="" href="#">Strategy solutions</a> </li>
-						<li> <a title="" href="#">Copywriting </a> </li>
-					</ul>
-				</div>
-				<!--end: widget categories-->
-
-				<!--widget contact us-->
-				<div class="widget clearfix widget-contact-us" style="background-image: url('{% static 'images/world-map.png' %}'); background-position: 50% 55px; background-repeat: no-repeat">
-					<h4 class="widget-title">Contact us</h4>
-					<ul class="list-large list-icons">
-						<li><i class="fa fa-map-marker"></i>
-							<strong>Address:</strong> 795 Folsom Ave, Suite 600
-							<br>San Francisco, CA 94107</li>
-						<li><i class="fa fa-phone"></i><strong>Phone:</strong> (123) 456-7890 </li>
-						<li><i class="fa fa-envelope"></i><strong>Email:</strong> <a href="mailto:first.last@example.com">first.last@example.com</a>
-						</li>
-						<li><i class="fa fa-clock-o"></i>Monday - Friday: <strong>08:00 - 22:00</strong>
-							<br>Saturday, Sunday: <strong>Closed</strong>
-						</li>
-					</ul>
-				</div>
-				<!--end: widget contact us-->
-
-				<!--widget blockquote -->
-				<div class="widget clearfix widget-blockquote">
-					<h4 class="widget-title">Blockquote widget</h4>
-					<blockquote class="blockquote-simple">
-						<p>Art is the only serious thing in the world. And the artist is the only person who is never serious.</p>
-						<small>by <cite>Oscar Wilde</cite></small>
-					</blockquote>
-				</div>
-				<!--end: widget blockquote -->
-
-			</div>
-			<!-- END: Sidebar-->
-		</div>
+  		</div>
+    </div>
 	</div>
 </section>
 <!-- END: SECTION -->
@@ -245,8 +132,8 @@
 	<div class="copyright-content">
 		<div class="container">
 			<div class="row">
-				<div class="copyright-text text-center"> &copy; 2016 POLO - Best HTML5 Template Ever. All Rights Reserved. <a target="_blank" href="http://www.inspiro-media.com">INSPIRO</a>
-				</div>
+        {% block footer %}
+      	{% endblock %}
 			</div>
 		</div>
 	</div>
