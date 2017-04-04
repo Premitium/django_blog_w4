@@ -73,5 +73,5 @@ def register_new_account(request):
             return redirect(reverse('index'))
         else:
             alert = form.errors
-            return render(request, 'registration.html', {'alert': alert})
-    return render(request, 'registration.html', locals())
+            return render(request, 'blog/register.html', {'alert': alert})
+    return render(request, 'blog/register.html', locals())
