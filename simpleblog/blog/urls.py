@@ -8,5 +8,7 @@ urlpatterns = [
     url(r'^login/$', login_view, name='login'),
     url(r'^profile/$', profile_view, name='profile'),
     url(r'^create/$', create_blog_post, name='create'),
-    url(r'^single-post/$', single_post_show, name='show')
+    url(r'^single-post/(?P<title>.*)', single_post_show, name='single-post')
 ]
+
+"""Must do: read more about regex"""

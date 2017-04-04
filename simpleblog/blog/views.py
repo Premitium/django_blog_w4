@@ -57,8 +57,10 @@ def login_view(request):
 def profile_view(request):
     return render(request, 'blog/profile.html', locals())
 
-def single_post_show(request):
-    
+def single_post_show(request, title):
+
+    post = BlogPost.objects.filter(title=title).first()
+
     return render(request, 'blog/single_post.html', locals())
 
 # login_required_views = [profile_view]
