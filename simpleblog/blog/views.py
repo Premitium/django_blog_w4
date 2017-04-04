@@ -51,6 +51,10 @@ def login_view(request):
 
     return render(request, 'blog/login.html', locals())
 
+@login_required
+def logout_view(request):
+    logout(request)
+    return redirect(reverse('index'))
 
 @login_required(login_url=reverse_lazy('blog:index'))
 def profile_view(request):
