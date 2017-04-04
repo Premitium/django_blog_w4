@@ -57,9 +57,9 @@ def login_view(request):
 def profile_view(request):
     return render(request, 'blog/profile.html', locals())
 
-def single_post_show(request, id):
+def single_post(request, id):
 
-    import ipdb; ipdb.set_trace()
+    # import ipdb; ipdb.set_trace()
     post = BlogPost.objects.filter(id=id).first()
 
     return render(request, 'blog/single_post.html', locals())
