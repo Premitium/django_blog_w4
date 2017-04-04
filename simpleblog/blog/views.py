@@ -4,7 +4,7 @@ from django.urls import reverse, reverse_lazy
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from .models import BlogPost, Tag
-from .forms import BlogPostCreateModelForm, LoginForm
+from .forms import BlogPostCreateModelForm, LoginForm, BlogPostRegistrationForm
 from . import services
 from .decorators import anonymous_required
 
@@ -16,7 +16,6 @@ def index(request):
     request.session['counter'] += 1
 
     posts = BlogPost.objects.all()
-    # import ipdb; ipdb.set_trace()
     tags = Tag.objects.all()
 
     return render(request, 'blog/index.html', locals())
@@ -58,21 +57,21 @@ def profile_view(request):
     return render(request, 'blog/profile.html', locals())
 
 def single_post(request, id):
-
-    # import ipdb; ipdb.set_trace()
     post = BlogPost.objects.filter(id=id).first()
 
     return render(request, 'blog/single_post.html', locals())
 
-# login_required_views = [profile_view]
+def register_new_account(request):
+    all_tags = Tags.objects.all()
+    form = BlogPostRegistrationForm()
+    if request.method == "POST":
+        form = BlogPostRegistrationForm(data=request.POST)
+        if form.is_valid():
+            new_user = User.objects.create_user(**form.cleaned_data)
+            login(request, new_user)
 
-
-# for view in login_required_views:
-#     fname = view.__name__
-#     local_definitions = locals()
-
-#     f = local_definitions.get(fname)
-
-#     f = login_required(f)
-
-#     local_definitions[fname] = f
+            return redirect(reverse('index'))
+        else:
+            alert = form.errors
+            return render(request, 'registration.html', {'alert': alert})
+    return render(request, 'registration.html', locals())

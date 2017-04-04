@@ -1,5 +1,5 @@
+from django.contrib.auth.models import User
 from django import forms
-
 from .models import BlogPost
 
 
@@ -28,3 +28,8 @@ class BlogPostCreateForm(forms.Form):
 
     title = forms.CharField(label='Title', max_length=255)
     content = forms.CharField(widget=forms.Textarea)
+
+class BlogPostRegistrationForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['username', 'first_name', 'last_name', 'email', 'password']
