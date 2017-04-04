@@ -1,10 +1,8 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.urls import reverse, reverse_lazy
-
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-
 from .models import BlogPost, Tag
 from .forms import BlogPostCreateModelForm, LoginForm
 from . import services
@@ -18,6 +16,7 @@ def index(request):
     request.session['counter'] += 1
 
     posts = BlogPost.objects.all()
+    # import ipdb; ipdb.set_trace()
     tags = Tag.objects.all()
 
     return render(request, 'blog/index.html', locals())
@@ -60,6 +59,7 @@ def profile_view(request):
 
 def single_post_show(request, title):
 
+    # import ipdb; ipdb.set_trace()
     post = BlogPost.objects.filter(title=title).first()
 
     return render(request, 'blog/single_post.html', locals())
