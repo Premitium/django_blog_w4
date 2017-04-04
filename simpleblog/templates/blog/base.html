@@ -73,7 +73,8 @@
 
 					<!--LOGO-->
 					<div id="logo">
-						<a href="index.html" class="logo" data-dark-logo="{% static 'images/logo-dark.png' %}"> <img src="{% static 'images/logo-dark.png' %}" alt="Polo Logo"> </a>
+						<a href="index" class="logo" data-dark-logo="{% static 'images/logo-dark.png' %}">
+              <img src="{% static 'images/logo-dark.png' %}" alt="Polo Logo"> </a>
 					</div>
 					<!--END: LOGO-->
 
@@ -119,8 +120,8 @@
 			<!-- Blog post-->
 			<div class="post-content post-thumbnail col-md-9">
         {% block content %}
-        {% endblock content %}
 
+        {% endblock content %}
   		</div>
     </div>
 	</div>
