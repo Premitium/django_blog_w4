@@ -62,7 +62,7 @@ def single_post(request, id):
     return render(request, 'blog/single_post.html', locals())
 
 def register_new_account(request):
-    all_tags = Tags.objects.all()
+    tags = Tag.objects.all()
     form = BlogPostRegistrationForm()
     if request.method == "POST":
         form = BlogPostRegistrationForm(data=request.POST)
