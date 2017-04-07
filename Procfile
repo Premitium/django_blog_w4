@@ -1,1 +1,1 @@
-web: gunicorn blog.wsgi --log-file -
+web: gunicorn salty-sierra-82246.wsgi --log-file -
